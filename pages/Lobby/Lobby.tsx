@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Linking } from "react-native";
 import Quiz from "../../pages/Quiz/Quiz";
 import { useState, useEffect } from "react";
 import Button from "../../components/Button";
@@ -64,6 +64,12 @@ export default function Lobby() {
               }}
             >
               {lang === "en" ? "Reset" : "යළි පිහිටුවන්න"}
+            </MenuItem>
+            <MenuItem onPress={() => {
+              Linking
+                .openURL("https://google.com")
+                .catch(err => console.error('Error', err));
+            }}>
             </MenuItem>
           </Menu>
         </View>

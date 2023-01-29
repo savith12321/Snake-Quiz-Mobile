@@ -7,6 +7,7 @@ import Button from "../../components/Button";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import ViewAnswers from '../ViewAnswers/ViewAnswers';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import { ActivityIndicator } from "react-native";
 
 export default function App(props : any) {
   const [quizes, setquizes]: any = React.useState([]);
@@ -61,6 +62,9 @@ export default function App(props : any) {
   return question === undefined && finished === false ? (
     <View>
       <native.StatusBar backgroundColor="#34D399"></native.StatusBar>
+      <View style={{ display: 'flex', justifyContent: "center", alignItems: 'center'}}>
+			  <ActivityIndicator size="large" color="#34D399" />
+      </View>
     </View>
   ) : finished === true ? (
     lang === "en" ? (
