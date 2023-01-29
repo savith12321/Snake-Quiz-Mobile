@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import Notbuttons from "./Notbuttons"
-const Ansitem = ({Img, Answer}: any) => {
+const Ansitem = ({Img, Answer, Red}: any) => {
   var styles = StyleSheet.create({
     Notbuttons:  {
       padding: 10,

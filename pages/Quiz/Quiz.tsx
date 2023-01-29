@@ -60,11 +60,9 @@ export default function App(props : any) {
     }
   }, [qnum]);
   return question === undefined && finished === false ? (
-    <View>
-      <native.StatusBar backgroundColor="#34D399"></native.StatusBar>
-      <View style={{ display: 'flex', justifyContent: "center", alignItems: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
 			  <ActivityIndicator size="large" color="#34D399" />
-      </View>
+        <native.StatusBar backgroundColor="#34D399"></native.StatusBar>
     </View>
   ) : finished === true ? (
     lang === "en" ? (

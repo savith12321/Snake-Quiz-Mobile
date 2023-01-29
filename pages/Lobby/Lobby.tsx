@@ -67,9 +67,10 @@ export default function Lobby() {
             </MenuItem>
             <MenuItem onPress={() => {
               Linking
-                .openURL("https://google.com")
+                .openURL("https://snake-quiz.savithsavith.repl.co/privacypolicy")
                 .catch(err => console.error('Error', err));
             }}>
+              {lang == "en" ? "Privacy policy" : "රහස්යතා ප්රතිපත්තිය"}
             </MenuItem>
           </Menu>
         </View>

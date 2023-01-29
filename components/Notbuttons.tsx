@@ -5,7 +5,7 @@ export default function Button(props : any) {
     const styles = StyleSheet.create({
         button: {
             paddingVertical: 14,
-            backgroundColor: props.red  === false ? 'tomato' :'#87ceeb'
+            backgroundColor: props.red  === true ? 'tomato' :'#87ceeb'
         },
         buttonText: {
             fontSize: 16,
