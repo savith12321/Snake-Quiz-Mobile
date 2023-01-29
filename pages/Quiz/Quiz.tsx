@@ -29,7 +29,7 @@ export default function App(props : any) {
         console.log(langStorage);
         await axios
           .get(
-            `https://snake-quiz.herokuapp.com/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
+            `https://snake-quiz.savithsavith.repl.co/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
           )
           .then((result) => {
             console.log(result.data);
@@ -49,7 +49,7 @@ export default function App(props : any) {
     setquestion(quizes[qnum]);
     if (quizes! != 0 && quizes.length === qnum) {
       axios
-        .post("https://snake-quiz.herokuapp.com/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
+        .post("https://snake-quiz.savithsavith.repl.co/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
         .then((resalt) => {
           console.log(resalt)
           setScore(resalt.data);
@@ -153,7 +153,7 @@ export default function App(props : any) {
       <ImageViewer
         imageUrls={[
           {
-            url: "https://snake-quiz.herokuapp.com/images/" + question.image,
+            url: "https://snake-quiz.savithsavith.repl.co/images/" + question.image,
           }
         ]}
         style={{

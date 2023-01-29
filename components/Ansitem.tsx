@@ -9,7 +9,7 @@ const Ansitem = ({Img, Answer}: any) => {
   });
   return (
     <View>
-      <Image source={{uri: "https://snake-quiz.herokuapp.com/images/" + Img }} style={{width: "100%", height: 400}}/>
+      <Image source={{uri: "https://snake-quiz.savithsavith.repl.co/images/" + Img }} style={{width: "100%", height: 400}}/>
       <Notbuttons text={Answer} red={true} style={styles.Notbuttons}/>
     </View>
   );
