@@ -10,7 +10,7 @@ const Ansitem = ({Img, Answer, Red}: any) => {
   return (
     <View>
       <Image source={{uri: "https://snake-quiz.savithsavith.repl.co/images/" + Img }} style={{width: "100%", height: 400}}/>
-      <Notbuttons text={Answer} red={true} style={styles.Notbuttons}/>
+      <Notbuttons text={Answer} red={Red} style={styles.Notbuttons}/>
     </View>
   );
 };

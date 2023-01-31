@@ -11,7 +11,7 @@ import Ansitem from "../../components/Ansitem";
 
 export default function ViewAnswers({ answers, lang, back }: any) {
   const renderItem = ({ item } : any) => (
-    <Ansitem Img={item.Img} Answer={item.Answer}/>
+    <Ansitem Img={item.Img} Answer={item.Answer} Red={item.Red}/>
   );
   return (
     <>
