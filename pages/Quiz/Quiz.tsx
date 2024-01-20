@@ -29,11 +29,7 @@ export default function App(props : any) {
         await setdifficulty(difficultyStorage);
         await axios
           .get(
-<<<<<<< HEAD
-            `http://192.168.6.203:4000/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
-=======
-            `https://snake-quiz.savithsavith.repl.co/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
->>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
+            `https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
           )
           .then((result) => {
             setquizes(result.data);
@@ -52,11 +48,7 @@ export default function App(props : any) {
     setquestion(quizes[qnum]);
     if (quizes! != 0 && quizes.length === qnum) {
       axios
-<<<<<<< HEAD
-        .post("http://192.168.6.203:4000/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
-=======
-        .post("https://snake-quiz.savithsavith.repl.co/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
->>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
+        .post("https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
         .then((resalt) => {
           setScore(resalt.data);
           setfinished(true);
@@ -159,11 +151,7 @@ export default function App(props : any) {
       <ImageViewer
         imageUrls={[
           {
-<<<<<<< HEAD
-            url: "http://192.168.6.203:4000/images/" + question.image,
-=======
-            url: "https://snake-quiz.savithsavith.repl.co/images/" + question.image,
->>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
+            url: "https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/images/" + question.image,
           }
         ]}
         style={{

@@ -67,7 +67,7 @@ export default function Lobby() {
             </MenuItem>
             <MenuItem onPress={() => {
               Linking
-                .openURL("https://snake-quiz.savithsavith.repl.co/privacypolicy")
+                .openURL("https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/privacypolicy")
                 .catch(err => console.error('Error', err));
             }}>
               {lang == "en" ? "Privacy policy" : "රහස්යතා ප්රතිපත්තිය"}
