@@ -11,7 +11,11 @@ import Ansitem from "../../components/Ansitem";
 
 export default function ViewAnswers({ answers, lang, back }: any) {
   const renderItem = ({ item } : any) => (
+<<<<<<< HEAD
     <Ansitem Img={item.Img} Answer={item.Answer} Red={item.Red} Url={"https://www.youtube.com/watch?v=dd5gUbs3tuU"}/>
+=======
+    <Ansitem Img={item.Img} Answer={item.Answer} Red={item.Red}/>
+>>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
   );
   return (
     <>

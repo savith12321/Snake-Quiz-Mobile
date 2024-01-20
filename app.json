@@ -2,7 +2,7 @@
   "expo": {
     "name": "Snake Quiz",
     "slug": "snakequizmobile",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,6 +20,7 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -29,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2b3f77bd-d894-47f4-9439-e605d00aa046"
+      }
     }
   }
 }

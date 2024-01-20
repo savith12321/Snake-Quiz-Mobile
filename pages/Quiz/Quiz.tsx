@@ -7,6 +7,7 @@ import Button from "../../components/Button";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import ViewAnswers from '../ViewAnswers/ViewAnswers';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import { ActivityIndicator } from "react-native";
 
 export default function App(props : any) {
   const [quizes, setquizes]: any = React.useState([]);
@@ -28,7 +29,11 @@ export default function App(props : any) {
         await setdifficulty(difficultyStorage);
         await axios
           .get(
+<<<<<<< HEAD
             `http://192.168.6.203:4000/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
+=======
+            `https://snake-quiz.savithsavith.repl.co/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
+>>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
           )
           .then((result) => {
             setquizes(result.data);
@@ -47,7 +52,11 @@ export default function App(props : any) {
     setquestion(quizes[qnum]);
     if (quizes! != 0 && quizes.length === qnum) {
       axios
+<<<<<<< HEAD
         .post("http://192.168.6.203:4000/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
+=======
+        .post("https://snake-quiz.savithsavith.repl.co/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
+>>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
         .then((resalt) => {
           setScore(resalt.data);
           setfinished(true);
@@ -55,8 +64,9 @@ export default function App(props : any) {
     }
   }, [qnum]);
   return question === undefined && finished === false ? (
-    <View>
-      <native.StatusBar backgroundColor="#34D399"></native.StatusBar>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+			  <ActivityIndicator size="large" color="#34D399" />
+        <native.StatusBar backgroundColor="#34D399"></native.StatusBar>
     </View>
   ) : finished === true ? (
     lang === "en" ? (
@@ -149,7 +159,11 @@ export default function App(props : any) {
       <ImageViewer
         imageUrls={[
           {
+<<<<<<< HEAD
             url: "http://192.168.6.203:4000/images/" + question.image,
+=======
+            url: "https://snake-quiz.savithsavith.repl.co/images/" + question.image,
+>>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
           }
         ]}
         style={{

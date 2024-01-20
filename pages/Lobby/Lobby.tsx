@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Linking } from "react-native";
 import Quiz from "../../pages/Quiz/Quiz";
 import { useState, useEffect } from "react";
 import Button from "../../components/Button";
@@ -64,6 +64,13 @@ export default function Lobby() {
               }}
             >
               {lang === "en" ? "Reset" : "යළි පිහිටුවන්න"}
+            </MenuItem>
+            <MenuItem onPress={() => {
+              Linking
+                .openURL("https://snake-quiz.savithsavith.repl.co/privacypolicy")
+                .catch(err => console.error('Error', err));
+            }}>
+              {lang == "en" ? "Privacy policy" : "රහස්යතා ප්රතිපත්තිය"}
             </MenuItem>
           </Menu>
         </View>

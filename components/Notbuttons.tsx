@@ -5,7 +5,11 @@ export default function NotButton(props : any) {
     const styles = StyleSheet.create({
         button: {
             paddingVertical: 14,
+<<<<<<< HEAD
             backgroundColor: props.red  === false ? '#87ceeb' : 'tomato'
+=======
+            backgroundColor: props.red  === true ? 'tomato' :'#87ceeb'
+>>>>>>> ce00dc1d3de00dd8f0c8487a57b65ef35d952487
         },
         buttonText: {
             fontSize: 16,
