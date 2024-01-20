@@ -26,13 +26,11 @@ export default function App(props : any) {
         var difficultyStorage = await AsyncStorage.getItem("difficulty");
         await setlang(langStorage);
         await setdifficulty(difficultyStorage);
-        console.log(langStorage);
         await axios
           .get(
-            `https://snake-quiz.herokuapp.com/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
+            `http://192.168.6.203:4000/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
           )
           .then((result) => {
-            console.log(result.data);
             setquizes(result.data);
             setid(result.data);
           });
@@ -49,13 +47,11 @@ export default function App(props : any) {
     setquestion(quizes[qnum]);
     if (quizes! != 0 && quizes.length === qnum) {
       axios
-        .post("https://snake-quiz.herokuapp.com/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
+        .post("http://192.168.6.203:4000/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
         .then((resalt) => {
-          console.log(resalt)
           setScore(resalt.data);
           setfinished(true);
         });
-      console.log("posted the awensers;");
     }
   }, [qnum]);
   return question === undefined && finished === false ? (
@@ -153,7 +149,7 @@ export default function App(props : any) {
       <ImageViewer
         imageUrls={[
           {
-            url: "https://snake-quiz.herokuapp.com/images/" + question.image,
+            url: "http://192.168.6.203:4000/images/" + question.image,
           }
         ]}
         style={{

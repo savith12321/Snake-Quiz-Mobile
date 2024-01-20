@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import Notbuttons from "./Notbuttons"
-const Ansitem = ({Img, Answer}: any) => {
+const Ansitem = ({Img, Answer, Red, Url}: any) => {
   var styles = StyleSheet.create({
     Notbuttons:  {
       padding: 10,
@@ -9,8 +9,8 @@ const Ansitem = ({Img, Answer}: any) => {
   });
   return (
     <View>
-      <Image source={{uri: "https://snake-quiz.herokuapp.com/images/" + Img }} style={{width: "100%", height: 400}}/>
-      <Notbuttons text={Answer} red={true} style={styles.Notbuttons}/>
+      <Image source={{uri: `http://192.168.6.203:4000/images/` + Img }} style={{width: "100%", height: 400}}/>
+      <Notbuttons text={Answer} red={Red} style={styles.Notbuttons} Url={Url}/>
     </View>
   );
 };
