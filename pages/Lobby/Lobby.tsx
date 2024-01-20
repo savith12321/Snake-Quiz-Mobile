@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Linking } from "react-native";
+import { View, Text, StyleSheet, Linking, Image } from "react-native";
 import Quiz from "../../pages/Quiz/Quiz";
 import { useState, useEffect } from "react";
 import Button from "../../components/Button";
@@ -7,6 +7,7 @@ import Data from "../Data/Data";
 import { Menu, MenuItem } from "react-native-material-menu";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Logo from "../../assets/icon.png";
 
 export default function Lobby() {
   const [play, setPlay] = useState(false);
@@ -75,7 +76,8 @@ export default function Lobby() {
           </Menu>
         </View>
         <View style={styles.container}>
-          <Text style={styles.title}>Snake Quiz</Text>
+          <Image source={Logo} style={styles.banner}/>
+          {/* <Text style={styles.title}>Snake Quiz</Text> */}
         </View>
         <View style={{margin: '4%'}}>
         <Button
@@ -115,4 +117,12 @@ const styles = StyleSheet.create({
     marginLeft: "90%",
     marginVertical: "5%",
   },
+  banner: {
+    width: "100%",
+    height: "40%",
+    padding: 100,
+    borderWidth: 5,
+    // borderColor: "black",
+    borderRadius: 50
+  }
 });
