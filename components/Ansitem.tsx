@@ -11,7 +11,7 @@ const Ansitem = ({Img, Answer, Red}: any) => {
   });
   return (
     <View>
-      <Image source={{uri: "https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/images/" + Img }} style={{width: "100%", height: 400}}/>
+      <Image source={{uri: "https://snakequiz.cyclic.app/images/" + Img }} style={{width: "100%", height: 400}}/>
       <Notbuttons text={Answer} red={Red} style={styles.Notbuttons}/>
     </View>
   );

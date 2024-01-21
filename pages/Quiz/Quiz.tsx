@@ -29,7 +29,7 @@ export default function App(props : any) {
         await setdifficulty(difficultyStorage);
         await axios
           .get(
-            `https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
+            `https://snakequiz.cyclic.app/api/quiz?lang=${langStorage}&difficulty=${difficultyStorage}`
           )
           .then((result) => {
             setquizes(result.data);
@@ -48,7 +48,7 @@ export default function App(props : any) {
     setquestion(quizes[qnum]);
     if (quizes! != 0 && quizes.length === qnum) {
       axios
-        .post("https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
+        .post("https://snakequiz.cyclic.app/api/quiz/score", {answers: answers, quiz: quizes, lang: lang})
         .then((resalt) => {
           setScore(resalt.data);
           setfinished(true);
@@ -81,7 +81,7 @@ export default function App(props : any) {
         <View style={{flexDirection: "row"}}>
           <View style={{width: "48%", marginLeft: '3%'}}>
             <Button
-              text="RESALTS"
+              text="RESULTS"
               Click={() => {
                 setResalts(true)
               }}
@@ -151,7 +151,7 @@ export default function App(props : any) {
       <ImageViewer
         imageUrls={[
           {
-            url: "https://d1f1cb95-80f6-4cfc-aad7-d9f1a90ab434-00-309isak8dim7m.kirk.replit.dev/images/" + question.image,
+            url: "https://snakequiz.cyclic.app/images/" + question.image,
           }
         ]}
         style={{
