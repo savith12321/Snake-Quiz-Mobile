@@ -2,7 +2,7 @@
   "expo": {
     "name": "Snake Quiz",
     "slug": "snakequizmobile",
-    "version": "4.0.0",
+    "version": "4.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 10,
+      "versionCode": 11,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
